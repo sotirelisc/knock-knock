@@ -36,10 +36,13 @@ public class ThreadNet implements Runnable {
     @Override
     public void run() {
         try {
+            // Get our local IP
             InetAddress localhost = InetAddress.getLocalHost();
             byte[] ip = localhost.getAddress();
             try {
+                // Change the last numbers of IP to preffered
                 ip[3] = (byte) this.pos;
+                // Ping it
                 InetAddress address = InetAddress.getByAddress(ip);
                 if (address.isReachable(500)) {
                     System.out.println("[" + this.name + "]: " + address + " is on (pingable).");
