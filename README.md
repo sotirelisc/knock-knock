@@ -1,4 +1,4 @@
 knock-knock
 ===========
 
-Get hostnames and net IPs of your network's computers.
+Simple Java app to get hostnames and IPs of computers connected to network using threads.
